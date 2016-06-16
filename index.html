@@ -5,6 +5,7 @@
     <title>mlyck-day03</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" media="screen">
     <link rel="stylesheet" href="font-awesome.min.css">
+    <!-- <script src="https://use.fontawesome.com/b4bdd79338.js"></script> -->
     <link rel="stylesheet" href="main.css" media="screen">
   </head>
   <body>
@@ -47,7 +48,9 @@
                 <p>"U2's 360 tour starts April 16, 2012. Get your tickets at Ticketmaster http://cl.ly/0d2P2f"</p>
               </div>
               <div class="disclaimer">
-                <p>Joining this mob means you agree to allow mobber to send this message on your account once <br/>the number of mobbers is reached.</p>
+                <!-- <br/> Is terrible practice. But necassary here to match the design we were tasked to do -->
+                <p>Joining this mob means you agree to allow mobber to send this message on your account once <br/>
+                  the number of mobbers is reached.</p>
               </div>
             </div>
           </div>
@@ -82,7 +85,6 @@
               This mob will only be released if it is joined by the
               needed amount of mobbers. Spread the word!
             </p>
-            <hr>
             <div class="share-links">
               <button class="tweet noOutline" type="button" name="tweet"><img src="images/twitter_bird.png"/>Tweet</button>
               <button class="share noOutline" type="button" name="share"><img src="images/FB_thumbs_up.png"/>Share</button>
@@ -112,6 +114,7 @@
               </div>
               <div class="imageContainer-footer">
                 <div class="description">
+                  <!-- <br/> Is bad practice. But necassary here to match the design we were tasked to do -->
                   <h5>Free Appetizer at <br/>
                     Ruth's Chris Steak House</h5>
                   <p>52 Mobbers, 100 Mobbers needed</p>
@@ -125,57 +128,60 @@
               </div>
               <div class="imageContainer-footer">
                 <div class="description">
-                  <h5>Presale for Twisted Sister <br/>Reunion Tour</h5>
+                  <h5>Presale for Twisted Sister Reunion Tour</h5>
                   <p>52 Mobbers, 100 Mobbers needed</p>
                 </div>
                 <p><i class="fa fa-clock-o clock" aria-hidden="true"></i> 3:12:43</p>
               </div>
             </div>
           </div>
-        <hr>
-        <section class="column-2">
+        <section class="column-2 max-width">
           <div class="upComingMobs left">
             <h2>Upcoming Mobs</h2>
-            <div class="upComingMob">
-              <p class="mobName">Muse's New Album Release</p>
-              <p class="mobbersNeeded">100 Mobbers Needed</p>
-              <p class="date">Thursday, April 4, 2012</p>
-            </div>
-            <div class="upComingMob">
-              <p class="mobName">P.F. Chang's Restaurant</p>
-              <p class="mobbersNeeded">100 Mobbers Needed</p>
-              <p class="date">Thursday, April 4, 2012</p>
-            </div>
-            <div class="upComingMob">
-              <p class="mobName">J.Crew Men's Watch Sale</p>
-              <p class="mobbersNeeded">100 Mobbers Needed</p>
-              <p class="date">Thursday, April 4, 2012</p>
-            </div>
-            <div class="upComingMob">
-              <p class="mobName">J.Crew Men's Watch Sale</p>
-              <p class="mobbersNeeded">100 Mobbers Needed</p>
-              <p class="date">Thursday, April 4, 2012</p>
-            </div>
+            <ul>
+              <li>
+                <p class="mobName">Muse's New Album Release</p>
+                <p class="mobbersNeeded">100 Mobbers Needed</p>
+                <p class="date">Thursday, April 4, 2012</p>
+              </li>
+              <li>
+                <p class="mobName">P.F. Chang's Restaurant</p>
+                <p class="mobbersNeeded">100 Mobbers Needed</p>
+                <p class="date">Thursday, April 4, 2012</p>
+              </li>
+              <li>
+                <p class="mobName">J.Crew Men's Watch Sale</p>
+                <p class="mobbersNeeded">100 Mobbers Needed</p>
+                <p class="date">Thursday, April 4, 2012</p>
+              </li>
+              <li>
+                <p class="mobName">J.Crew Men's Watch Sale</p>
+                <p class="mobbersNeeded">100 Mobbers Needed</p>
+                <p class="date">Thursday, April 4, 2012</p>
+              </li>
+            </ul>
           </div>
           <div class="startYourOwnMob right">
             <h2>Start your own mob.</h2>
-            <div class="step">
-              <div class="rounded-step">
-                1
+            <div class="steps-container">
+              <div class="step">
+                <div class="rounded-step">
+                  1
+                </div>
+                <p>Upload Mob Image</p>
               </div>
-              <p>Upload Mob Image</p>
-            </div>
-            <div class="step">
-              <div class="rounded-step">
-                2
+              <div class="step">
+                <div class="rounded-step">
+                  2
+                </div>
+                <p>Write Mob Message</p>
               </div>
-              <p>Write Mob Message</p>
-            </div>
-            <div class="step">
-              <div class="rounded-step">
-                3
+              <div class="step">
+                <div class="rounded-step">
+                  3
+                </div>
+                <p>Upload Mob Reward</p>
               </div>
-              <p>Upload Mob Reward</p>
             </div>
             <button type="button" name="startAMob">Start a Mob</button>
           </div>
@@ -183,47 +189,46 @@
       </section>
     </main>
     <footer>
-      <div class="3-column">
+      <div class="column-3 max-width">
         <div class="mobCategories">
-          <h2>Mob Categories</h2>
+          <h3>Mob Categories</h3>
           <div class="categories-container">
-            <button type="button" name="cat-music">Music</button>
-            <button type="button" name="cat-games">Games</button>
-            <button type="button" name="cat-charity">Charity</button>
-            <button type="button" name="cat-technology">Technology</button>
-            <button type="button" name="cat-fashion">Fashion</button>
-            <button type="button" name="cat-film">Film</button>
-            <button type="button" name="cat-design">Design</button>
-            <button type="button" name="cat-sports">Sports</button>
-            <button type="button" name="cat-art">Art</button>
-            <button type="button" name="cat-theater">Theater</button>
+            <button class="category" type="button" name="cat-music">Music</button>
+            <button class="category" type="button" name="cat-games">Games</button>
+            <button class="category" type="button" name="cat-charity">Charity</button>
+            <button class="category" type="button" name="cat-technology">Technology</button>
+            <button class="category" type="button" name="cat-fashion">Fashion</button>
+            <button class="category" type="button" name="cat-film">Film</button>
+            <button class="category" type="button" name="cat-design">Design</button>
+            <button class="category" type="button" name="cat-sports">Sports</button>
+            <button class="category" type="button" name="cat-art">Art</button>
+            <button class="category" type="button" name="cat-theater">Theater</button>
           </div>
         </div>
         <div class="connectWithMobber">
-          <h2>Connect with Mobber</h2>
+          <h3>Connect with Mobber</h3>
           <p>
             Be the first to know about the latest
             mobs. Join our mailing list. And don't
             worry, it's completely private.
           </p>
-          <input type="text" name="email" value="email">
-          <input type="button" name="submit" value="">
+          <form class="emailForm" action="index.html" method="post">
+            <input type="text" name="email" placeholder="email">
+            <button type="button" name="button"><i class="fa fa-check" aria-hidden="true"></i></button>
+          </form>
           <a href="#">Like us on Facebook</a>
-          <hr>
           <a href="#">Follow us on Twitter</a>
-          <hr>
           <a href="#">+1 us on Google</a>
         </div>
         <div class="howItWorks">
           <button type="button" name="howItWorksButton">How it Works</button>
-          <h2>Have a problem?</h2>
+          <h4>Have a problem?</h4>
           <p>
             Feel free to contact us if you're
             experiencing a problem or just need
             some help.
           </p>
           <button type="button" name="emailButton">Email Us</button>
-          <hr>
           <p>
             © 2012 Mobber, Inc.
             All Rights Reserved

@@ -1,3 +1,5 @@
+/* Note, to make half a triangle, just ommit the top border (set it to 0)*/
+
 nav {
   height: 57px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,4f4f4f+0,121212+100 */
@@ -29,11 +31,6 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
-hr {
-  max-width: 100%;
-  margin: 0;
-}
-
 .noOutline {
   outline: none;
 }
@@ -41,6 +38,24 @@ hr {
 .max-width {
   width: 890px;
 }
+
+/*dddddddd
+HHHHHHHHH   HHHHHHHHH                                                  d::::::d
+H:::::::H   H:::::::H                                                  d::::::d
+H:::::::H   H:::::::H                                                  d::::::d
+HH::::::H   H::::::HH                                                  d:::::d
+ H:::::H     H:::::H      eeeeeeeeeeee      aaaaaaaaaaaaa       ddddddddd:::::d     eeeeeeeeeeee    rrrrr   rrrrrrrrr
+ H:::::H     H:::::H    ee::::::::::::ee    a::::::::::::a    dd::::::::::::::d   ee::::::::::::ee  r::::rrr:::::::::r
+ H::::::HHHHH::::::H   e::::::eeeee:::::ee  aaaaaaaaa:::::a  d::::::::::::::::d  e::::::eeeee:::::eer:::::::::::::::::r
+ H:::::::::::::::::H  e::::::e     e:::::e           a::::a d:::::::ddddd:::::d e::::::e     e:::::err::::::rrrrr::::::r
+ H:::::::::::::::::H  e:::::::eeeee::::::e    aaaaaaa:::::a d::::::d    d:::::d e:::::::eeeee::::::e r:::::r     r:::::r
+ H::::::HHHHH::::::H  e:::::::::::::::::e   aa::::::::::::a d:::::d     d:::::d e:::::::::::::::::e  r:::::r     rrrrrrr
+ H:::::H     H:::::H  e::::::eeeeeeeeeee   a::::aaaa::::::a d:::::d     d:::::d e::::::eeeeeeeeeee   r:::::r
+ H:::::H     H:::::H  e:::::::e           a::::a    a:::::a d:::::d     d:::::d e:::::::e            r:::::r
+HH::::::H     H::::::HHe::::::::e          a::::a    a:::::a d::::::ddddd::::::dde::::::::e           r:::::r
+H:::::::H     H:::::::H e::::::::eeeeeeee  a:::::aaaa::::::a  d:::::::::::::::::d e::::::::eeeeeeee   r:::::r
+H:::::::H     H:::::::H  ee:::::::::::::e   a::::::::::aa:::a  d:::::::::ddd::::d  ee:::::::::::::e   r:::::r
+HHHHHHHHH     HHHHHHHHH    eeeeeeeeeeeeee    aaaaaaaaaa  aaaa   ddddddddd   ddddd    eeeeeeeeeeeeee   rrrrrrr       */
 
 header {
   box-shadow: 0 5px 10px #DEDDDD;
@@ -297,15 +312,16 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
 .right .disclaimer {
   text-align: center;
   margin: 13px 0 17px 0;
-  padding: 0 15px;
+  padding: 0 15px 16px 0;
   font-size: 11px;
+  border-bottom: 1px solid #C7C7C5;
 }
 
 .share-links {
   display: flex;
   width: 100%;
   align-items: center;
-  margin-top: 16px;
+  /*margin-top: 16px;*/
 }
 
 .share-links > button {
@@ -413,6 +429,8 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
 .column-3 {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #C7C7C5;
+  padding-bottom: 34px;
 }
 
 
@@ -441,6 +459,10 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   font-size: 10px;
 }
 
+.description > h5 {
+  max-width: 215px;
+}
+
 
 .column-3 .description {
   display: flex;
@@ -457,11 +479,9 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   display: flex;
 }
 
-footer {
-  background: #545252;
+.bottomSection .left, .bottomSection .right {
+  margin-top: 20px;
 }
-
-
 
 .column-2 {
   display: flex;
@@ -471,5 +491,204 @@ footer {
 
 .upComingMobs {
   width: 586px;
-  flex: 1;
+}
+
+.upComingMobs > h2 {
+  margin-bottom: 17px;
+}
+
+.upComingMobs li {
+  display: flex;
+  color: #414141;
+  font-size: 13px;
+  border-bottom: 1px solid #CBCBCB;
+  padding: 10px 0;
+}
+
+.upComingMobs ul > li > p:first-child {
+  width: 39.5%;
+  font-weight: 600;
+  float: left;
+}
+
+.upComingMobs ul > li > p:last-child {
+  text-align: right;
+  flex-grow: 1;
+}
+
+
+
+
+.startYourOwnMob {
+  display: flex;
+  align-items: center;
+  background-color: #D0CDC7;
+  height: 200px;
+}
+
+.startYourOwnMob > h2 {
+  margin-top: 18px;
+  color: #fff;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 7px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.step > p {
+  font-size: 12px;
+}
+
+.rounded-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d5d5d5+0,f9f9f9+100 */
+  background: rgb(213,213,213); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(213,213,213,1) 0%, rgba(249,249,249,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(213,213,213,1) 0%,rgba(249,249,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(213,213,213,1) 0%,rgba(249,249,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5d5d5', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+  border: 1px solid #AFADAA;
+  border-radius: 50%;
+  box-shadow: inset 0px 2px #F0F0F0, inset 0px -2px #D9D8D8;
+}
+
+.startYourOwnMob button {
+  width: 93%;
+  margin: 11px 0;
+  padding: 16px 0;
+  color: #1780AD;
+  font-size: 22px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,f0efef+0,d1cec8+100 */
+  background: rgb(240,249,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(240,249,255,1) 0%, rgba(240,239,239,1) 0%, rgba(209,206,200,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(240,249,255,1) 0%,rgba(240,239,239,1) 0%,rgba(209,206,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(240,249,255,1) 0%,rgba(240,239,239,1) 0%,rgba(209,206,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#d1cec8',GradientType=0 ); /* IE6-9 */
+  border: 1px solid #95928E;
+  border-radius: 5px;
+  outline: none;
+}
+
+/*
+FFFFFFFFFFFFFFFFFFFFFF                                           tttt
+F::::::::::::::::::::F                                        ttt:::t
+F::::::::::::::::::::F                                        t:::::t
+FF::::::FFFFFFFFF::::F                                        t:::::t
+  F:::::F       FFFFFF   ooooooooooo      ooooooooooo   ttttttt:::::ttttttt        eeeeeeeeeeee    rrrrr   rrrrrrrrr
+  F:::::F              oo:::::::::::oo  oo:::::::::::oo t:::::::::::::::::t      ee::::::::::::ee  r::::rrr:::::::::r
+  F::::::FFFFFFFFFF   o:::::::::::::::oo:::::::::::::::ot:::::::::::::::::t     e::::::eeeee:::::eer:::::::::::::::::r
+  F:::::::::::::::F   o:::::ooooo:::::oo:::::ooooo:::::otttttt:::::::tttttt    e::::::e     e:::::err::::::rrrrr::::::r
+  F:::::::::::::::F   o::::o     o::::oo::::o     o::::o      t:::::t          e:::::::eeeee::::::e r:::::r     r:::::r
+  F::::::FFFFFFFFFF   o::::o     o::::oo::::o     o::::o      t:::::t          e:::::::::::::::::e  r:::::r     rrrrrrr
+  F:::::F             o::::o     o::::oo::::o     o::::o      t:::::t          e::::::eeeeeeeeeee   r:::::r
+  F:::::F             o::::o     o::::oo::::o     o::::o      t:::::t    tttttte:::::::e            r:::::r
+FF:::::::FF           o:::::ooooo:::::oo:::::ooooo:::::o      t::::::tttt:::::te::::::::e           r:::::r
+F::::::::FF           o:::::::::::::::oo:::::::::::::::o      tt::::::::::::::t e::::::::eeeeeeee   r:::::r
+F::::::::FF            oo:::::::::::oo  oo:::::::::::oo         tt:::::::::::tt  ee:::::::::::::e   r:::::r
+FFFFFFFFFFF              ooooooooooo      ooooooooooo             ttttttttttt      eeeeeeeeeeeeee   rrrrrrr           */
+
+
+footer {
+  margin-top: 54px;
+  background: #545252;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+footer .column-3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+}
+
+.mobCategories {
+  max-width: 35%;
+}
+
+.mobCategories > h3 {
+  margin-bottom: 14px;
+}
+
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category {
+  background: #636362;
+  border: 1px solid #3E3D3D;
+  border-radius: 5px;
+  color: #fff;
+  width: 126px;
+  padding: 8px 0;
+  margin: 0 23px 11px 0;
+  box-shadow: inset 0px 1px #828281;
+  outline: 0;
+}
+
+.connectWithMobber {
+  display: flex;
+  flex-direction: column;
+  padding-left: 68px;
+}
+
+.connectWithMobber > h3 {
+  margin-bottom: 13px;
+}
+
+.connectWithMobber > p {
+  font-size: 11px;
+}
+
+.emailForm {
+  margin-top: 20px;
+  /* This fixes the whitspace between inline elements */
+  font-size: 0;
+}
+
+.emailForm > input[type="text"] {
+  border: 0 solid;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  width: 141px;
+  padding: 14px 12px;
+  outline: 0;
+  font-size: 12px;
+}
+/* Placeholder styles */
+::-webkit-input-placeholder { color:#919191; font-size: 12px; }
+::-moz-placeholder { color:#919191; font-size: 12px; } /* firefox 19+ */
+:-ms-input-placeholder { color:#919191; font-size: 12px; } /* ie */
+input:-moz-placeholder { color:#919191; font-size: 12px; }
+
+.emailForm > button {
+  background-color: #9D9D9D;
+  border: 0 solid;
+  color: #fff;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  height: 42px;
+  width: 41px;
+  outline: none;
+  font-size: 22px;
+  vertical-align: bottom;
+}
+
+.howItWorks {
+  padding-left: 68px;
 }
