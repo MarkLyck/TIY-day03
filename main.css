@@ -154,7 +154,7 @@ header {
 
 .nav-container .menu-btn:checked ~ .menu {
   max-height: 240px;
-  height: 240px;
+  /*height: 240px;*/
   overflow: visible;
 }
 
@@ -328,11 +328,11 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   display: flex;
   background: #D0CDC7;
   color: #404141;
-  height: 78px;
+  /*height: 78px;*/
   width: 589px;
   z-index: 1;
   align-items: center;
-  padding: 0 22px;
+  padding: 21px 22px;
   box-sizing: border-box;
 }
 
@@ -1012,11 +1012,24 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
     border-bottom: 1px solid black;
     width: 100%;
     text-align: center;
+    background-color: rgba(79,79,79,1);
   }
-
   .nav-container {
     z-index: 1;
   }
+  .quoteContainer > h1 {
+    font-size: 3vw;
+  }
+  .topSection .left {
+    width: 100%;
+  }
+  .topSection .imageContainer {
+    width: 100%;
+  }
+  .featuredMob .footer {
+    width: 100%
+  }
+
 }
 
 @media screen and (max-width: 490px) {
@@ -1029,7 +1042,10 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   .topSection .right {
     flex-direction: row;
   }
-    .bottomSection .column-3 {
-        justify-content: flex-start;
-    }
+  .top-container {
+    justify-content: center;
+  }
+  .bottomSection .column-3 {
+    justify-content: flex-start;
+  }
 }
