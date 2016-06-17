@@ -73,7 +73,7 @@ header {
   align-items: center;
 }
 
-.nav-container a:hover {
+.nav-container a:hover, .nav-container .menu-btn:hover {
   color: #EDC82C;
 }
 
@@ -87,6 +87,7 @@ header {
 .nav-container ul {
   display: flex;
   align-items: center;
+  transition: max-height .2s ease-out;
 }
 
 .nav-container li {
@@ -94,6 +95,88 @@ header {
   font-size: 15px;
   text-transform: uppercase;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Hamburger menu */
+.nav-container .menu-icon {
+  cursor: pointer;
+  cursor: hand;
+  display: none;
+  padding: 28px 14px 28px 15px;
+  margin-left: 7px;
+  position: relative;
+}
+
+.nav-container .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.nav-container .menu-icon .navicon:before,
+.nav-container .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.nav-container .menu-btn {
+  display: none;
+}
+
+.nav-container .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.nav-container .menu-icon .navicon:after {
+  top: -5px;
+}
+
+
+.nav-container .menu-btn:checked ~ .menu {
+  max-height: 240px;
+  height: 240px;
+  overflow: visible;
+}
+
+.nav-container .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.nav-container .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.nav-container .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.nav-container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.nav-container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
 
 .user {
   display: flex;
@@ -123,7 +206,6 @@ a.userName:hover > i {
 .quoteContainer {
   display: flex;
   justify-content: center;
-  /*height: 82px;*/
   padding: 24px 0;
 }
 
@@ -131,7 +213,6 @@ a.userName:hover > i {
   display: flex;
   align-items: center;
   font-weight: normal;
-  /*font-size: 29px;*/
   font-size: 2.06vw;
 }
 
@@ -165,6 +246,12 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   justify-content: center;
   background: #F2F0EC;
   padding-top: 29px;
+}
+
+.topSection .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .top-container {
@@ -263,6 +350,12 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   align-items: flex-end;
   margin-left: 21px;
   flex: 1;
+}
+
+.join-share {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*TODO This is not pixel perfect, margin doesn't work here*/
@@ -889,9 +982,53 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   font-size: 13px;
 }
 
+/* Mobile Nav */
+@media screen and (max-width: 630px) {
+  .logo {
+    margin-left: calc(50% - 47px);
+    margin-right: 0;
+    transform: translateX(-50%);
+  }
+  .userName {
+    display: none;
+  }
+  .nav-container .menu-icon {
+    display: inline-block;
+    order: -1;
+  }
+  .menu {
+    background-color: rgba(79,79,79,1);
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu > li {
+    padding: 20px;
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-align: center;
+  }
 
+  .nav-container {
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .user {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 910px) {
+  .topSection .right {
+    flex-direction: row;
+  }
     .bottomSection .column-3 {
         justify-content: flex-start;
     }

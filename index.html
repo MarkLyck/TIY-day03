@@ -13,7 +13,11 @@
       <nav>
         <div class="nav-container max-width">
           <img class="logo" src="images/mobber_higher_res.png" alt="Logo" />
-          <ul>
+          <!-- These are for the mobile Nav -->
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+          <ul class="menu">
             <li><a href="#">Find a mob</a></li>
             <li><a href="#">Start a mob</a></li>
           </ul>
@@ -73,23 +77,25 @@
                 </div>
               </div>
             </div>
-            <button class="yellowButton" type="button" name="joinThisMob">Join this Mob!</button>
-            <div class="reward-container">
-              <img src="images/medal.png" alt="Medal" />
-              <div class="column">
-                <h4>Your Reward</h4>
-                <p>Ticket Presale Entrance</p>
+            <div class="join-share">
+              <button class="yellowButton" type="button" name="joinThisMob">Join this Mob!</button>
+              <div class="reward-container">
+                <img src="images/medal.png" alt="Medal" />
+                <div class="column">
+                  <h4>Your Reward</h4>
+                  <p>Ticket Presale Entrance</p>
+                </div>
               </div>
-            </div>
-            <p class="disclaimer">
-              This mob will only be released if it is joined by the
-              needed amount of mobbers. Spread the word!
-            </p>
-            <div class="share-links">
-              <button class="tweet noOutline" type="button" name="tweet"><img src="images/twitter_bird.png"/>Tweet</button>
-              <button class="share noOutline" type="button" name="share"><img src="images/FB_thumbs_up.png"/>Share</button>
-              <button class="gPlus noOutline" type="button" name="+1"><img src="images/g_plus.png"/>+<b>1</b></button>
-              <a class="link" href="#"><i class="fa fa-link fa-rotate-90" aria-hidden="true"></i>http://kck.st/Av7rle</a>
+              <p class="disclaimer">
+                This mob will only be released if it is joined by the
+                needed amount of mobbers. Spread the word!
+              </p>
+              <div class="share-links">
+                <button class="tweet noOutline" type="button" name="tweet"><img src="images/twitter_bird.png"/>Tweet</button>
+                <button class="share noOutline" type="button" name="share"><img src="images/FB_thumbs_up.png"/>Share</button>
+                <button class="gPlus noOutline" type="button" name="+1"><img src="images/g_plus.png"/>+<b>1</b></button>
+                <a class="link" href="#"><i class="fa fa-link fa-rotate-90" aria-hidden="true"></i>http://kck.st/Av7rle</a>
+              </div>
             </div>
           </div>
         </div>
