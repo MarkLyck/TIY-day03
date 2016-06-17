@@ -1,3 +1,5 @@
+/* I use Colorzilla to generate my gradients due to lengthy vendor prefixes */
+
 nav {
   height: 57px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,4f4f4f+0,121212+100 */
@@ -19,6 +21,11 @@ ul {
 a {
   text-decoration: none;
   color: #F6F6F6;
+}
+
+button {
+  cursor: pointer;
+  cursor: hand;
 }
 
 h3 {
@@ -55,6 +62,8 @@ H:::::::H     H:::::::H e::::::::eeeeeeee  a:::::aaaa::::::a  d:::::::::::::::::
 H:::::::H     H:::::::H  ee:::::::::::::e   a::::::::::aa:::a  d:::::::::ddd::::d  ee:::::::::::::e   r:::::r
 HHHHHHHHH     HHHHHHHHH    eeeeeeeeeeeeee    aaaaaaaaaa  aaaa   ddddddddd   ddddd    eeeeeeeeeeeeee   rrrrrrr       */
 
+
+/* FIXME This boxshadow does not work, only 1 pixel shows up */
 header {
   box-shadow: 0 5px 10px #DEDDDD;
 }
@@ -92,8 +101,7 @@ header {
   align-items: center;
 }
 
-/* TODO ask about target pseudo selector, this DOES NOT WORK*/
-.user > a:target {
+a.userName:hover > i {
   color: #EDC82C;
 }
 
@@ -115,14 +123,16 @@ header {
 .quoteContainer {
   display: flex;
   justify-content: center;
-  height: 82px;
+  /*height: 82px;*/
+  padding: 24px 0;
 }
 
 .quoteContainer h1 {
   display: flex;
   align-items: center;
   font-weight: normal;
-  font-size: 29px;
+  /*font-size: 29px;*/
+  font-size: 2.06vw;
 }
 
 /*dddddddd
@@ -311,6 +321,17 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   outline: 0;
 }
 
+.yellowButton:hover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e8a526+0,996c1a+100 */
+  background: rgb(232,165,38); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(232,165,38,1) 0%, rgba(153,108,26,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(232,165,38,1) 0%,rgba(153,108,26,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(232,165,38,1) 0%,rgba(153,108,26,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8a526', endColorstr='#996c1a',GradientType=0 ); /* IE6-9 */
+  border: 1px solid #7F5815;
+}
+
+
 .reward-container {
   display: flex;
   align-self: center;
@@ -384,6 +405,15 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   margin-right: 3px;
 }
 
+.tweet:hover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4f9fb+48,77bfef+100 */
+  background: rgb(244,249,251); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(244,249,251,1) 48%, rgba(119,191,239,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(244,249,251,1) 48%,rgba(119,191,239,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(244,249,251,1) 48%,rgba(119,191,239,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f9fb', endColorstr='#77bfef',GradientType=0 ); /* IE6-9 */
+}
+
 .share-links > .share {
   display: flex;
   align-items: center;
@@ -396,6 +426,10 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
 
 .share > img {
   height: 13px;
+}
+
+.share-links > .share:hover {
+  background: #d3d7e4;
 }
 
 .share-links > .gPlus {
@@ -424,6 +458,15 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   left: -3px;
 }
 
+.gPlus:hover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,e5e3e0+0,cccccc+100 */
+  background: rgb(240,249,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(240,249,255,1) 0%, rgba(229,227,224,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(240,249,255,1) 0%,rgba(229,227,224,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(240,249,255,1) 0%,rgba(229,227,224,1) 0%,rgba(204,204,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+
 .link {
   font-size: 12px;
   color: #599FBE;
@@ -436,6 +479,9 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   vertical-align: middle;
 }
 
+.link:hover {
+  text-decoration: underline;
+}
 
 
                                             /*iiii
@@ -462,7 +508,7 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   align-items: center;
 }
 
-.column-3 {
+.bottomSection .column-3 {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #C7C7C5;
@@ -480,6 +526,7 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   display: flex;
   justify-content: space-between;
   margin-top: 7px;
+  color: #484848;
 }
 
 .imageContainer-footer > p {
@@ -640,6 +687,16 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   outline: none;
 }
 
+.startYourOwnMob button:hover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,e5e5e5+0,b2b0ab+100 */
+  background: rgb(240,249,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(240,249,255,1) 0%, rgba(229,229,229,1) 0%, rgba(178,176,171,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(240,249,255,1) 0%,rgba(229,229,229,1) 0%,rgba(178,176,171,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(240,249,255,1) 0%,rgba(229,229,229,1) 0%,rgba(178,176,171,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#b2b0ab',GradientType=0 ); /* IE6-9 */
+
+}
+
 /*
 FFFFFFFFFFFFFFFFFFFFFF                                           tttt
 F::::::::::::::::::::F                                        ttt:::t
@@ -699,6 +756,11 @@ footer .column-3 {
   font-size: 13px;
 }
 
+.category:hover {
+  background: #EDC82C;
+  box-shadow: inset 0px 1px #fbe37c;
+}
+
 .connectWithMobber {
   display: flex;
   flex-direction: column;
@@ -727,7 +789,7 @@ footer .column-3 {
   padding: 14px 12px;
   outline: 0;
   font-size: 12px;
-  box-shadow: inset 0px 2px 3px #808080;
+  box-shadow: inset 0 4px 4px -2px #808080;
 }
 /* Placeholder styles */
 ::-webkit-input-placeholder { color:#919191; font-size: 12px; }
@@ -746,7 +808,12 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   outline: none;
   font-size: 22px;
   vertical-align: bottom;
-  box-shadow: inset 0px 2px 3px #808080;
+  /* The shadow design actually have bleeding shadows on the edges, but it was killing my OCD so I fixed it. */
+  box-shadow: inset 0 4px 4px -2px #808080;
+}
+
+.emailForm > button:hover {
+  background-color: #EDC82C;
 }
 
 .footer-share-links > li {
@@ -754,6 +821,10 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   border-bottom: 1px solid #3D3D3D;
   color: #B7B6B6;
   font-size: 13px;
+}
+
+.footer-share-links > li > a:hover {
+  color: #EDC82C;
 }
 
 .footer-share-links > li:last-child {
@@ -794,6 +865,7 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   margin: 0 0 24px 0;
   height: 48px;
   width: 210px;
+  font-size: 17px;
 }
 
 .howItWorks h4 {
@@ -815,4 +887,12 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   padding-top: 7px;
   border-top: 1px solid #3D3D3D;
   font-size: 13px;
+}
+
+
+
+@media screen and (max-width: 910px) {
+    .bottomSection .column-3 {
+        justify-content: flex-start;
+    }
 }
