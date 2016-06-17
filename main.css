@@ -1,5 +1,3 @@
-/* Note, to make half a triangle, just ommit the top border (set it to 0)*/
-
 nav {
   height: 57px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,4f4f4f+0,121212+100 */
@@ -36,7 +34,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 .max-width {
-  width: 890px;
+  width: 895px;
 }
 
 /*dddddddd
@@ -63,11 +61,18 @@ header {
 
 .nav-container {
   display: flex;
+  align-items: center;
 }
 
+.nav-container a:hover {
+  color: #EDC82C;
+}
+
+/* The font used for the logo costs $45, so using the entire logo png instead, so it's more visually similair*/
 .logo {
-  height: 57px;
-  margin-right: 50px;
+  height: 27px;
+  width: auto;
+  margin-right: 26px;
 }
 
 .nav-container ul {
@@ -77,25 +82,33 @@ header {
 
 .nav-container li {
   margin-right: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 .user {
   display: flex;
-  margin-left: auto;
+  margin: 0 2px 0 auto;
   align-items: center;
+}
+
+/* TODO ask about target pseudo selector, this DOES NOT WORK*/
+.user > a:target {
+  color: #EDC82C;
 }
 
 .user img {
   display: flex;
-  height: 49px;
+  height: 47px;
   border: 0;
   border-radius: 25px;
   align-items: center;
-  margin-right: 8px;
+  margin-right: 7px;
 }
 
 .userName > i {
   margin-left: 10px;
+  font-size: 20px;
   color: #A8A8A8;
 }
 
@@ -140,20 +153,20 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
 .topSection{
   display: flex;
   justify-content: center;
-  flex-direction: row;
   background: #F2F0EC;
-  padding-top: 28px;
+  padding-top: 29px;
 }
 
 .top-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .featuredMob .imageContainer {
   background-image: url("images/u2_worldTour.jpg");
   color: #FFF;
   height: 380px;
-  width: 586px;
+  width: 589px;
   background-size: cover;
   position: relative;
 }
@@ -188,8 +201,8 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   position: absolute;
   background-color: #EDC82C;
   height: 30px;
-  width: 132px;
-  bottom: -14px;
+  width: 133px;
+  bottom: -15px;
   left: -6px;
   display: flex;
   align-items: center;
@@ -200,12 +213,26 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   border-bottom: 1px solid #DAA621;
 }
 
+.mobMessage::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  /* Giving it a hight allows for a small box above the triangle */
+  height: 2px;
+  /* This creates half 90 degree triangle */
+  border-style: solid;
+  border-width: 0 6px 6px 0;
+  border-color: transparent #EDC82C transparent transparent;
+}
+
 .featuredMob .footer {
   display: flex;
   background: #D0CDC7;
   color: #404141;
   height: 78px;
-  width: 586px;
+  width: 589px;
   z-index: 1;
   align-items: center;
   padding: 0 22px;
@@ -228,10 +255,9 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   flex: 1;
 }
 
+/*TODO This is not pixel perfect, margin doesn't work here*/
 .counters {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   margin-bottom: 24px;
 }
 
@@ -258,6 +284,10 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   height: 30px;
   width: 132px;
   background: #B5ADA4;
+  color: #444444;
+  text-shadow: 0px 1px #C6C1BA;
+  text-transform: uppercase;
+  font-size: 12px;
   margin: 0 -2px 0 0;
 }
 
@@ -275,18 +305,18 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   background: -webkit-linear-gradient(top,  rgba(254,225,81,1) 0%,rgba(232,165,38,1) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom,  rgba(254,225,81,1) 0%,rgba(232,165,38,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fee151', endColorstr='#e8a526',GradientType=0 ); /* IE6-9 */
-  margin-left: -19px;
   padding: 0;
   border: 1px solid #D19B30;
   border-radius: 5px;
+  outline: 0;
 }
 
 .reward-container {
   display: flex;
   align-self: center;
   background: #FFF;
-  width: 95%;
-  height: 70px;
+  width: 96%;
+  height: 71px;
   border-right: 1px solid #C2C2C2;
   border-bottom: 1px solid #C2C2C2;
   border-left: 1px solid #C2C2C2;
@@ -311,7 +341,7 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
 
 .right .disclaimer {
   text-align: center;
-  margin: 13px 0 17px 0;
+  margin: 13px 0 18px 0;
   padding: 0 15px 16px 0;
   font-size: 11px;
   border-bottom: 1px solid #C7C7C5;
@@ -321,7 +351,6 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   display: flex;
   width: 100%;
   align-items: center;
-  /*margin-top: 16px;*/
 }
 
 .share-links > button {
@@ -375,7 +404,12 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   justify-content: flex-end;
   padding: 0 5px 1px 0;
   font-size: 14px;
-  background: #F8F8F8;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,f2f0ec+0,e4e4e4+100 */
+  background: rgb(240,249,255); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(240,249,255,1) 0%, rgba(242,240,236,1) 0%, rgba(228,228,228,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(240,249,255,1) 0%,rgba(242,240,236,1) 0%,rgba(228,228,228,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(240,249,255,1) 0%,rgba(242,240,236,1) 0%,rgba(228,228,228,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
   border: 1px solid #B1B1B1;
   color: #D85841;
   width: 35px;
@@ -391,13 +425,15 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
 }
 
 .link {
-  font-size: 13px;
+  font-size: 12px;
   color: #599FBE;
 }
 
 .link > i {
   color: #5B5B5A;
   margin: 0 5px 0 3px;
+  font-size: 15px;
+  vertical-align: middle;
 }
 
 
@@ -420,7 +456,7 @@ m::::m   m::::m   m::::m a::::::::::aa:::ai::::::i  n::::n    n::::n
 mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
 
 .bottomSection {
-  margin-top: 36px;
+  margin-top: 38px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -430,13 +466,13 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #C7C7C5;
-  padding-bottom: 34px;
+  padding-bottom: 33px;
 }
 
 
 .column-3 .imageContainer {
-  width: 282px;
-  height: 183px;
+  width: 284px;
+  height: 184px;
   overflow: hidden;
 }
 
@@ -461,6 +497,7 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
 
 .description > h5 {
   max-width: 215px;
+  margin-bottom: 2px;
 }
 
 
@@ -479,7 +516,11 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   display: flex;
 }
 
-.bottomSection .left, .bottomSection .right {
+.bottomSection .left {
+  margin-top: 14px;
+}
+
+.bottomSection .right {
   margin-top: 20px;
 }
 
@@ -494,7 +535,7 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
 }
 
 .upComingMobs > h2 {
-  margin-bottom: 17px;
+  margin-bottom: 22px;
 }
 
 .upComingMobs li {
@@ -502,11 +543,11 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   color: #414141;
   font-size: 13px;
   border-bottom: 1px solid #CBCBCB;
-  padding: 10px 0;
+  padding: 10.5px 0;
 }
 
 .upComingMobs ul > li > p:first-child {
-  width: 39.5%;
+  width: 40.5%;
   font-weight: 600;
   float: left;
 }
@@ -523,7 +564,8 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   display: flex;
   align-items: center;
   background-color: #D0CDC7;
-  height: 200px;
+  height: 199px;
+  margin-left: 23px;
 }
 
 .startYourOwnMob > h2 {
@@ -536,6 +578,18 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   justify-content: space-around;
   width: 100%;
   margin-top: 7px;
+  position: relative;
+}
+
+.steps-bar {
+  align-self: center;
+  width: 75%;
+  height: 7px;
+  top: 14px;
+  left: 31px;
+  background: #BDBBB5;
+  position: absolute;
+  z-index: 0;
 }
 
 .step {
@@ -543,10 +597,13 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   flex-direction: column;
   text-align: center;
   align-items: center;
+  z-index: 1;
 }
 
 .step > p {
   font-size: 12px;
+  position: relative;
+  top: 3px;
 }
 
 .rounded-step {
@@ -603,7 +660,7 @@ FFFFFFFFFFF              ooooooooooo      ooooooooooo             ttttttttttt   
 
 
 footer {
-  margin-top: 54px;
+  margin-top: 55px;
   background: #545252;
   display: flex;
   justify-content: center;
@@ -621,7 +678,7 @@ footer .column-3 {
 }
 
 .mobCategories > h3 {
-  margin-bottom: 14px;
+  margin: 4px 0 13px 0;
 }
 
 .categories-container {
@@ -634,11 +691,12 @@ footer .column-3 {
   border: 1px solid #3E3D3D;
   border-radius: 5px;
   color: #fff;
-  width: 126px;
-  padding: 8px 0;
-  margin: 0 23px 11px 0;
+  width: 133px;
+  padding: 10px 0;
+  margin: 0 21px 10px 0;
   box-shadow: inset 0px 1px #828281;
   outline: 0;
+  font-size: 13px;
 }
 
 .connectWithMobber {
@@ -648,7 +706,7 @@ footer .column-3 {
 }
 
 .connectWithMobber > h3 {
-  margin-bottom: 13px;
+  margin: 4px 0 13px 0;
 }
 
 .connectWithMobber > p {
@@ -665,10 +723,11 @@ footer .column-3 {
   border: 0 solid;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  width: 141px;
+  width: 143px;
   padding: 14px 12px;
   outline: 0;
   font-size: 12px;
+  box-shadow: inset 0px 2px 3px #808080;
 }
 /* Placeholder styles */
 ::-webkit-input-placeholder { color:#919191; font-size: 12px; }
@@ -687,12 +746,14 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   outline: none;
   font-size: 22px;
   vertical-align: bottom;
+  box-shadow: inset 0px 2px 3px #808080;
 }
 
 .footer-share-links > li {
   padding: 5px 0;
   border-bottom: 1px solid #3D3D3D;
   color: #B7B6B6;
+  font-size: 13px;
 }
 
 .footer-share-links > li:last-child {
@@ -714,15 +775,10 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
 
 .social-media-icon {
   color: #545252;
+  position: absolute;
+  bottom: -5px;
+  font-size: 20px;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -737,20 +793,21 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   align-self: flex-end;
   margin: 0 0 24px 0;
   height: 48px;
-  width: 208px;
+  width: 210px;
 }
 
 .howItWorks h4 {
-  margin-bottom: 13px;
+  margin: 0 0 14px 2px;
 }
 
 .howItWorks p {
   color: #D9D9D9;
   font-size: 12px;
+  margin-left: 2px;
 }
 
 .howItWorks .category {
-  margin: 12px 0;
+  margin: 12px 2px;
 }
 
 .howItWorks .legal {
