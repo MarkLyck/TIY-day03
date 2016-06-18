@@ -1,6 +1,7 @@
 /* I use Colorzilla to generate my gradients due to lengthy vendor prefixes */
 
 /*TODO make the logo a navigation link*/
+/*TODO UpcomingMobs list should be clickable links*/
 
 nav {
   height: 57px;
@@ -349,6 +350,14 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   padding: 0 25px;
   margin: 9px 0 24px 0;
   width: 85%;
+  position: relative;
+}
+
+.featuredMob .disclaimer .arrow {
+  position: absolute;
+  top: -23px;
+  left: 7px;
+  height: 30px;
 }
 
 .right {
@@ -356,7 +365,7 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   flex-direction: column;
   align-items: flex-end;
   margin-left: 21px;
-  flex: 1;
+  /*flex: 1;*/
 }
 
 .join-share {
@@ -466,11 +475,12 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   padding: 0 15px 17px 0;
   font-size: 11px;
   border-bottom: 1px solid #C7C7C5;
-  width: 98%
+  width: 93%
 }
 
 .share-links {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   align-items: center;
 }
@@ -613,14 +623,18 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #C7C7C5;
-  padding-bottom: 33px;
+  padding-bottom: 28px;
 }
 
 
 .column-3 .imageContainer {
   width: 284px;
-  height: 184px;
+  /*height: 184px;*/
   overflow: hidden;
+}
+
+.column-3 .imageContainer img {
+  height: auto;
 }
 
 .imageContainer-footer {
@@ -679,7 +693,8 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
 }
 
 .upComingMobs {
-  width: 586px;
+  /*width: 586px;*/
+  flex: 1;
 }
 
 .upComingMobs > h2 {
@@ -698,11 +713,12 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   width: 40.5%;
   font-weight: 600;
   float: left;
+  flex: 1;
 }
 
 .upComingMobs ul > li > p:last-child {
   text-align: right;
-  flex-grow: 1;
+  flex: 1;
 }
 
 
@@ -712,8 +728,10 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   display: flex;
   align-items: center;
   background-color: #D0CDC7;
-  height: 199px;
   margin-left: 23px;
+  width: 286px;
+  height: 199px;
+  text-align: center;
 }
 
 .startYourOwnMob > h2 {
@@ -823,6 +841,7 @@ footer {
   display: flex;
   justify-content: center;
   color: #fff;
+  padding-bottom: 31px;
 }
 
 footer .column-3 {
@@ -990,18 +1009,95 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   font-size: 13px;
 }
 
+@media screen and (max-width: 910px) {
+  .max-width {
+    width: 90%
+  }
+  .topSection .max-width {
+    width: 589px;
+  }
+  .topSection .right {
+    flex-direction: row;
+  }
+  .top-container {
+      flex-direction: column;
+      justify-content: center;
+  }
+  .topSection .left {
+    margin: 0 auto;
+  }
+  .featuredMob .disclaimer {
+    max-width: 589px;
+  }
+  .imageContainer {
+    width: 100%;
+  }
+  .topSection .right {
+    margin: 0;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .topSection .join-share {
+    max-width: 50%;
+  }
+  .top-container {
+    justify-content: center;
+  }
+  .topSection .counters {
+    flex-direction: column;
+  }
+  /*
+  The images I found to match the design closely, are very low res.
+  So I decided to place them in a centered column without making them bigger.
+  Usually I'd make the elements take up more screenspace at this point, but it got too pixelated.
+  */
+  .bottomSection .column-3 {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bottomSection .column-3 a {
+    margin-bottom: 20px;
+  }
+  .bottomSection .imageContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+  .bottomSection .imageContainer img {
+    max-width: 100%;
+  }
+  .upComingMobs > ul > li > p:nth-child(2) {
+    display: none;
+  }
+  footer .column-3 {
+    flex-direction: column;
+  }
+  footer .column-2 > div {
+    width: 50%;
+  }
+  footer .mobCategories {
+    max-width: 100%;
+  }
+  footer .connectWithMobber {
+    padding: 0;
+  }
+  footer .howItWorks .yellowButton {
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .userName {
+    display: none;
+  }
+}
+
 /* Mobile Nav */
 @media screen and (max-width: 630px) {
-  .max-width {
-    width: 100%
-  }
   .logo {
     margin-left: calc(50% - 47px);
     margin-right: 0;
     transform: translateX(-50%);
-  }
-  .userName {
-    display: none;
   }
   .nav-container .menu-icon {
     display: inline-block;
@@ -1037,43 +1133,33 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   .topSection .imageContainer {
     width: 100%;
   }
-  .featuredMob {
-    /*width: 100%;*/
-  }
   .featuredMob .footer {
     width: 100%
   }
 
 }
 
-@media screen and (max-width: 490px) {
-  .user {
-    display: none;
+@media screen and (max-width: 555px) {
+  footer .column-2 {
+    flex-direction: column;
+  }
+  footer .column-2 > div {
+    width: 100%;
+  }
+  .howItWorks {
+    margin: 20px 0;
+    padding: 0;
+  }
+  .bottomSection .column-2 {
+    flex-direction: column;
+  }
+  .startYourOwnMob {
+    margin-left: 0;
   }
 }
 
-@media screen and (max-width: 910px) {
-  .topSection .right {
-    flex-direction: row;
-  }
-  .top-container {
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-  .topSection .left {
-    margin: 0 auto;
-  }
-  .featuredMob .disclaimer {
-    max-width: 589px;
-  }
-  .imageContainer {
-    width: 100%;
-  }
-  .top-container {
-    justify-content: center;
-  }
-  .bottomSection .column-3 {
-    justify-content: flex-start;
+@media screen and (max-width: 490px) {
+  .user {
+    display: none;
   }
 }
