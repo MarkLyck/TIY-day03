@@ -1,6 +1,6 @@
-/* I use Colorzilla to generate my gradients due to lengthy vendor prefixes */
+/* I use Colorzilla to generate my gradients due to useability and lengthy vendor prefixes */
+/* I used AutoPrefixer to add vendor prefixes to all my flex elements */
 
-/*TODO make the logo a navigation link*/
 /*TODO UpcomingMobs list should be clickable links*/
 
 nav {
@@ -113,6 +113,12 @@ header {
 
 
 /* Mobile Hamburger menu */
+
+/*
+For this I did have to look up how to design the button, and how to animate it in pure CSS.
+But I do understand all the code.
+*/
+
 .nav-container .menu-icon {
   cursor: pointer;
   cursor: hand;
@@ -157,7 +163,6 @@ header {
 
 .nav-container .menu-btn:checked ~ .menu {
   max-height: 240px;
-  /*height: 240px;*/
   overflow: visible;
 }
 
@@ -177,8 +182,6 @@ header {
 .nav-container .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
-
-
 
 
 .user {
@@ -701,22 +704,26 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   margin-bottom: 22px;
 }
 
-.upComingMobs li {
+.upComingMobs li > a {
   display: flex;
   color: #414141;
   font-size: 13px;
   border-bottom: 1px solid #CBCBCB;
   padding: 10.5px 0;
 }
+.upComingMobs li > a:hover > p:first-child {
+  color: #EDC82C;
+}
 
-.upComingMobs ul > li > p:first-child {
+
+.upComingMobs ul > li > a > p:first-child {
   width: 40.5%;
   font-weight: 600;
   float: left;
   flex: 1;
 }
 
-.upComingMobs ul > li > p:last-child {
+.upComingMobs ul > li > a > p:last-child {
   text-align: right;
   flex: 1;
 }
@@ -1066,7 +1073,7 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   .bottomSection .imageContainer img {
     max-width: 100%;
   }
-  .upComingMobs > ul > li > p:nth-child(2) {
+  .upComingMobs > ul > li > a > p:nth-child(2) {
     display: none;
   }
   footer .column-3 {
@@ -1094,7 +1101,7 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
 
 /* Mobile Nav */
 @media screen and (max-width: 630px) {
-  .logo {
+  .logo-container {
     margin-left: calc(50% - 47px);
     margin-right: 0;
     transform: translateX(-50%);
