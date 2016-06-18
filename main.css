@@ -1,5 +1,7 @@
 /* I use Colorzilla to generate my gradients due to lengthy vendor prefixes */
 
+/*TODO make the logo a navigation link*/
+
 nav {
   height: 57px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0f9ff+0,4f4f4f+0,121212+100 */
@@ -256,7 +258,11 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
 
 .top-container {
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
+}
+
+.featuredMob > div {
+  margin: 0 auto;
 }
 
 .featuredMob .imageContainer {
@@ -336,12 +342,13 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
   box-sizing: border-box;
 }
 
-.disclaimer {
+.featuredMob .disclaimer {
   display: flex;
   color: #A1A09F;
   font-size: 12px;
   padding: 0 25px;
   margin: 9px 0 24px 0;
+  width: 85%;
 }
 
 .right {
@@ -455,10 +462,11 @@ LLLLLLLLLLLLLLLLLLLLLLLL  aaaaaaaaaa  aaaa  nnnnnn    nnnnnn   ddddddddd   ddddd
 
 .right .disclaimer {
   text-align: center;
-  margin: 13px 0 18px 0;
-  padding: 0 15px 16px 0;
+  margin: 11px 0 18px 0;
+  padding: 0 15px 17px 0;
   font-size: 11px;
   border-bottom: 1px solid #C7C7C5;
+  width: 98%
 }
 
 .share-links {
@@ -984,6 +992,9 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
 
 /* Mobile Nav */
 @media screen and (max-width: 630px) {
+  .max-width {
+    width: 100%
+  }
   .logo {
     margin-left: calc(50% - 47px);
     margin-right: 0;
@@ -1026,6 +1037,9 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
   .topSection .imageContainer {
     width: 100%;
   }
+  .featuredMob {
+    /*width: 100%;*/
+  }
   .featuredMob .footer {
     width: 100%
   }
@@ -1041,6 +1055,20 @@ input:-moz-placeholder { color:#919191; font-size: 12px; }
 @media screen and (max-width: 910px) {
   .topSection .right {
     flex-direction: row;
+  }
+  .top-container {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .topSection .left {
+    margin: 0 auto;
+  }
+  .featuredMob .disclaimer {
+    max-width: 589px;
+  }
+  .imageContainer {
+    width: 100%;
   }
   .top-container {
     justify-content: center;
