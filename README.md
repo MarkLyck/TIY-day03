@@ -16,7 +16,7 @@ The main differences are the logo and images, we weren't given image assets, so 
 
 We also weren't provided with the correct fonts, so all of the text is somewhat different.
 
-The website is fully responsive. All hover links work And I have implemented a different functioning mobile navigation bar with an animated hamburger icon using purely CSS.
+The website is fully responsive. All hover links work And I have implemented a different functioning mobile navigation bar with an animated hamburger icon using purely CSS. I also added a little Javascript to make the main counter on the website actually count down.
 
 ![My Mobile Navigation Bar]( https://github.com/MarkLyck/TIY-day03/blob/master/images/mobile-nav-screenshot.png?raw=true "Mobile Nav")
 
