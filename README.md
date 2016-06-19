@@ -2,7 +2,7 @@
 
 We were tasked to recreate a pixel perfect website from an image
 
-We were given 2 options, an easy one called "[SURF & PADDLE CO.](https://github.com/user/repo/blob/branch/other_file.md)", and a harder 'Adventure Mode' called "MOBBER"
+We were given 2 options, an easy one called "[SURF & PADDLE CO.](https://github.com/MarkLyck/TIY-day05)", and a harder 'Adventure Mode' called "MOBBER"
 
 I had some extra time on my hand, so I did both projects.
 
