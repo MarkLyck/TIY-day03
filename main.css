@@ -633,10 +633,13 @@ mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaaiiiiiiii  nnnnnn    nnnnnn*/
   padding-bottom: 28px;
 }
 
+.column-3 > a:hover h5 {
+  color: #EDC82C;
+}
+
 
 .column-3 .imageContainer {
   width: 284px;
-  /*height: 184px;*/
   overflow: hidden;
 }
 
